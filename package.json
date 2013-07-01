@@ -10,7 +10,7 @@
     "Rodrigues, Andre <andrerod@microsoft.com>",
     "Tavares, Chris <ctavares@microsoft.com>"
   ],
-  "version": "0.6.16",
+  "version": "0.6.17",
   "description": "Windows Azure Cross Platform Command Line tool",
   "tags": [
     "azure",
@@ -35,7 +35,7 @@
   ],
   "dependencies": {
     "azure" : "git://github.com/WindowsAzure/azure-sdk-for-node.git#dev",
-    "xml2js" : "0.1.x",
+    "xml2js": "0.1.x",
     "xmlbuilder": "0.4.x",
     "underscore": "1.4.x",
     "node-uuid": "1.2.0",
@@ -47,7 +47,8 @@
     "colors": "0.x.x",
     "eyes": "0.x.x",
     "easy-table": "0.0.1",
-    "github": "0.1.6"
+    "github": "0.1.6",
+    "kuduscript": "git://github.com/projectkudu/KuduScript.git#593601edb55c0c9d2925650077ba9214e3df927c"
   },
   "devDependencies": {
     "mocha": "*",
@@ -72,8 +73,7 @@
     "unit-mc": "node scripts/unit.js --mc testlistmc.txt",
     "jshint": "jshint lib --jslint-reporter --extra-ext '._js'",
     "preci": "jshint lib --reporter=checkstyle --extra-ext '._js' > checkstyle-result.xml",
-    "ci": "node scripts/unit.js testlist.txt -xunit > noisy-test-result.xml",
-    "postci": "node scripts/filter-testresults.js -rm noisy-test-result.xml > test-result.xml",
+    "ci": "node scripts/unit.js testlist.txt -xunit",
     "preacceptance": "node scripts/cuke-environment.js setup",
     "acceptance": "node node_modules/cucumber/bin/cucumber.js",
     "postacceptance": "node scripts/cuke-environment.js teardown"
